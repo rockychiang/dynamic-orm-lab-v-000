@@ -19,7 +19,9 @@ class InteractiveRecord
   end
 
   def initialize(attributes={})
-
+    attributes.each do |key, values|
+      self.push("#{key}=",values)
+    end
   end
 
 end
